@@ -1,0 +1,23 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de saldo</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>id de la caja</label>
+            <input type="number" class="form-control" id="idCaja" [(ngModel)]="saldo.idCaja" name="idCaja">
+        </div>
+        <div class="form-group">
+            <label>fecha</label>
+            <input type="date" class="form-control" id="fecha" [(ngModel)]="saldo.fecha" name="fecha">
+        </div>
+        <div class="form-group">
+            <label>Cantidad</label>
+            <input type="number" class="form-control" id="cantidad" [(ngModel)]="saldo.cantidad" name="cantidad">
+        </div>
+        <div class="form-group">
+            <label>Descripción</label>
+            <input type="text" class="form-control" id="desc" [(ngModel)]="saldo.desc" name="desc">
+        </div>
+
+        <button class="btn btn-success">Guardar</button>
+    </form>
+</div>

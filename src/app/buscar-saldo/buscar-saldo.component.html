@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de saldo</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Fecha</label>
+            <input type="date" class="form-control" id="fecha" [(ngModel)]="fecha" name="fecha">
+            <label>ID de la caja</label>
+            <input type="number" class="form-control" id="idCaja" [(ngModel)]="idCaja" name="fecha">
+        </div>
+        <button class="btn btn-success">Buscar</button>
+    </form>
+</div>
+
+<h2>Lista saldos</h2>
+<table class="table table-stripped">
+    <thead class="table-dark">
+        <tr>
+            <th>ID Caja</th>
+            <th>Fecha</th>
+            <th>Cantidad</th>
+            <th>Descripcion</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let saldo of saldos">
+            <td>{{saldo.idCaja}}</td>
+            <td>{{saldo.fecha}}</td>
+            <td>{{saldo.cantidad}}</td>
+            <td>{{saldo.desc}}</td>
+        </tr>
+    </tbody>
+</table>
